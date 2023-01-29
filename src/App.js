@@ -1,13 +1,13 @@
-
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Accordian from "./components/Accordian";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className="text-3xl font-bold underline">
-          Edit  and save to reload.
-        </p>
-      </header>
+    <div className="App mx-5">
+      <Header />
+      <Home />
+      <Accordian />
     </div>
   );
 }
