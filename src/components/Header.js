@@ -2,7 +2,7 @@ import { Popover } from "@headlessui/react";
 
 export default function Example() {
   return (
-    <Popover className="relative bg-white">
+    <Popover className="relative">
       <div className="flex items-center justify-between p-6 md:justify-start md:space-x-10">
         {/* <div className="flex justify-start lg:w-0 lg:flex-1">
           <a href="#">

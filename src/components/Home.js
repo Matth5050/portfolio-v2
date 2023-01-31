@@ -18,7 +18,7 @@ export default function Home() {
         DevOps by day, front-end by night. I'm always looking to build new
         things.
       </p>
-      <p className="mt-2">
+      <p className="mt-2 ">
         I'm Matt Herbert, a DevOps engineer in Portland, Oregon. With a solid
         foundation in AWS and React, I aim to create apps that maximize
         enjoyment and minimize frustration
