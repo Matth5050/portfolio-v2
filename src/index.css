@@ -19,11 +19,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(0, 0, 0);
   background: linear-gradient(
-      to right top,
-      rgb(55, 65, 81),
-      rgb(17, 24, 39),
-      rgb(0, 0, 0)
+      214deg,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(42, 9, 9, 1) 42%,
+      rgba(66, 0, 0, 1) 74%
     )
     fixed;
   /* background: -webkit-gradient(
