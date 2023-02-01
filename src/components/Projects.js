@@ -51,10 +51,10 @@ export default function Projects() {
           {Object.values(projects).map((projs) => (
             <div className="mb-5">
               <img src={projs.pic} alt={projs.alt} className="mt-5"></img>
-              <h4 className="text-lg font-bold mt-4">
+              <h4 className="text-lg font-bold mt-4 text-white">
                 {projs.title} - {projs.stack}
               </h4>
-              <p className="mt-1">{projs.description}</p>
+              <p className="mt-1 text-white">{projs.description}</p>
               <hr className="mt-2"></hr>
             </div>
           ))}

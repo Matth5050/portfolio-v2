@@ -44,8 +44,8 @@ export default function Accordian() {
         animate={customAnimation}
         className="mt-7"
       >
-        <AccordionHeader onClick={() => handleOpen(1)}>
-          Projects
+        <AccordionHeader className="" onClick={() => handleOpen(1)}>
+          <p className="text-white">Projects</p>
         </AccordionHeader>
         <AccordionBody>
           <Projects />
