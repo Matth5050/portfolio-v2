@@ -5,7 +5,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import Projects from "./Projects";
-import Certificates from "./Certificates";
+import OpenSource from "./OpenSource";
 
 function Icon({ id, open }) {
   return (
@@ -25,7 +25,7 @@ function Icon({ id, open }) {
 }
 
 export default function Accordian() {
-  const [open, setOpen] = useState(1);
+  const [open, setOpen] = useState(0);
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
@@ -56,11 +56,11 @@ export default function Accordian() {
         icon={<Icon id={2} open={open} />}
         animate={customAnimation}
       >
-        <AccordionHeader className="mt-5" onClick={() => handleOpen(2)}>
-          Certifications
+        <AccordionHeader className="" onClick={() => handleOpen(2)}>
+          <p className="text-white">Open Source</p>
         </AccordionHeader>
         <AccordionBody>
-          <Certificates />
+          <OpenSource />
         </AccordionBody>
       </Accordion>
     </Fragment>

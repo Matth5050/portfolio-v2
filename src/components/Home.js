@@ -1,6 +1,31 @@
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
+  const [theme, setTheme] = useState(null);
+
+  //checks user device for preferred light/dark mode
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  //checks if dark mode is enabled
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  //toggles light/dark mode
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <div>
       <div>
@@ -10,11 +35,21 @@ export default function Home() {
           alt=""
         />
       </div>
-      <p className="mt-5 font-bold text-white">
-        DevOps by day, front-end by night. I'm always looking to build new
-        things.
+      <p className="mt-5 home-font text-xl font-bold dark:text-red-700 text-white ">
+        DevOps by{" "}
+        <span className="inline-block text-transparent bg-clip-text bg-gradient-to-b from-orange-600 via-yellow-600 to-amber-400">
+          day
+        </span>
+        , front-end by{" "}
+        <span
+          onClick={handleThemeSwitch}
+          className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800"
+        >
+          night
+        </span>
+        . I'm always looking to build new things.
       </p>
-      <p className="mt-2 text-white">
+      <p className=" mt-2 text-white">
         I'm Matt Herbert, a DevOps engineer in Portland, Oregon. With a solid
         foundation in AWS and React, I aim to create apps that maximize
         enjoyment and minimize frustration
