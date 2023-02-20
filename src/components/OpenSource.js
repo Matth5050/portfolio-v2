@@ -8,7 +8,7 @@ export default function OpenSource() {
       alt: "RecordSponge Screen Shot",
       webLink: "https://recordsponge.com/",
       repoLink: "https://github.com/codeforpdx/recordexpungPDX",
-      stack: "Typescript",
+      stack: "React.tsx",
       title: "RecordSponge",
       description:
         "RecordSponge allows users to quickly determine if they qualify for record expungement making this process much more affordable and time efficient.",
