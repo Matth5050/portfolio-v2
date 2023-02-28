@@ -11,7 +11,7 @@ export default function Projects() {
       alt: "JokeBook Screen Shot",
       webLink: "https://jokebook.xyz/",
       repoLink: "https://github.com/Matth5050/jokeBook2.0",
-      stack: "React",
+      stack: "React.js",
       title: "JokeBook",
       description:
         "React web-app designed to bring all things funny to one place. Users can click a button to receive a joke or they can view user submitted jokes and vote on who is the most funny!",
@@ -22,7 +22,7 @@ export default function Projects() {
       alt: "LeaderBet Screen Shot",
       // webLink: "",
       repoLink: "https://github.com/Matth5050/LeaderBet",
-      stack: "React",
+      stack: "React.js",
       title: "LeaderBet",
       description:
         "Sports betting app built with React that allows users to view games, scores, and odds while competing with each other for most wins on a global leader board",
@@ -55,7 +55,7 @@ export default function Projects() {
 
   return (
     <React.Fragment>
-      <div className="sm:flex">
+      <div className="md:max-w-6xl	">
         <div className="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
           {Object.values(projects).map((projs) => (
             <div className="mb-5">

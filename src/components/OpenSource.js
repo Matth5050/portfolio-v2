@@ -18,7 +18,7 @@ export default function OpenSource() {
 
   return (
     <React.Fragment>
-      <div className="sm:flex">
+      <div className="md:max-w-7xl	">
         <div className="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
           {Object.values(openSource).map((projs) => (
             <div className="mb-5">
