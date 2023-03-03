@@ -1,17 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import OpenSource from "./OpenSource";
 import Projects from "./Projects";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export default function Turnstile() {
+  const [index, setIndex] = useState(0);
+  const [slideLeft, setSlideLeft] = useState(null);
+  const length = 2;
+
+  const handlePrevious = () => {
+    const newIndex = index - 1;
+    setIndex(newIndex < 0 ? length - 1 : newIndex);
+    setSlideLeft(true);
+  };
+
+  const handleNext = () => {
+    const newIndex = index + 1;
+    setIndex(newIndex >= length ? 0 : newIndex);
+    setSlideLeft(false);
+  };
+
   return (
     <>
-      <div className="turnstile mt-10 flex">
-        <button className="left">
+      <div className="flex justify-center mt-10 text-white">
+        <p className="mr-4">Projects</p>
+        <p>Open Source</p>
+      </div>
+      <div className="turnstile mt-10 flex justify-center">
+        <button
+          onClick={() => handlePrevious()}
+          className="transition ease-in-out duration-500 border border-transparent hover:border-red-900 hover:border rounded-md mt-5 mb-5 mr-4"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             height="40"
             fill="currentColor"
-            className="bi bi-chevron-left fill-white hover:fill-blue-500"
+            className="bi bi-chevron-left fill-white hover:fill-blue-500 sticky top-1/3 bottom-1/3"
             viewBox="0 0 16 16"
           >
             <path
@@ -21,15 +46,42 @@ export default function Turnstile() {
           </svg>
         </button>
         <div className="flex justify-center">
-          <Projects />
+          <TransitionGroup>
+            <CSSTransition
+              key={index}
+              timeout={{ enter: 500, exit: 500 }}
+              classNames={
+                slideLeft
+                  ? {
+                      enter: "fade-enter",
+                      enterActive: "fade-enter-active",
+                      exit: "fade-exit",
+                      exitActive: "fade-exit-active",
+                      exitDone: "fade-exit-done",
+                    }
+                  : {
+                      enter: "fade-enter-opp",
+                      enterActive: "fade-enter-active-opp",
+                      exit: "fade-exit",
+                      exitActive: "fade-exit-active-opp",
+                      exitDone: "fade-exit-done-opp",
+                    }
+              }
+            >
+              {index === 0 ? <Projects /> : <OpenSource />}
+            </CSSTransition>
+          </TransitionGroup>
         </div>
-        <button className="right">
+        <button
+          onClick={() => handleNext()}
+          className="rounded-md transition ease-in-out duration-500 border border-transparent hover:border-red-900 hover:border mt-5 mb-5"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             height="40"
             fill="currentColor"
-            className="bi bi-chevron-right fill-white hover:fill-blue-500"
+            className="bi bi-chevron-right fill-white hover:fill-blue-500 sticky top-1/3 bottom-1/3"
             viewBox="0 0 16 16"
           >
             <path
