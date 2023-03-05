@@ -48,28 +48,10 @@ code {
   font-family: "Poppins", sans-serif;
 }
 
-/* .fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in-out;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
-} */
-
 /* slide left */
 .fade-enter {
   opacity: 0;
-  transform: translateX(10%);
+  transform: translateX(1%);
 }
 
 .fade-enter-active {
@@ -79,7 +61,7 @@ code {
 }
 
 .fade-exit {
-  opacity: 1;
+  opacity: 0;
   transform: translateX(0%);
 }
 
@@ -96,7 +78,7 @@ code {
 /* slide right  */
 .fade-enter-opp {
   opacity: 0;
-  transform: translateX(-10%);
+  transform: translateX(-1%);
 }
 
 .fade-enter-active-opp {
