@@ -6,6 +6,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 export default function Turnstile() {
   const [index, setIndex] = useState(0);
   const [slideLeft, setSlideLeft] = useState(null);
+
   const length = 2;
 
   const handlePrevious = () => {
@@ -20,11 +21,37 @@ export default function Turnstile() {
     setSlideLeft(false);
   };
 
+  const onClickProj = () => {
+    setIndex(0);
+  };
+
+  const onClickSource = () => {
+    setIndex(1);
+  };
+
   return (
     <>
       <div className="flex justify-center mt-10 text-white">
-        <p className="mr-4">Projects</p>
-        <p>Open Source</p>
+        <p
+          onClick={onClickProj}
+          className={
+            index === 0
+              ? "transition ease-in-out duration-700 border border-b-red-200 border-x-transparent border-t-transparent mr-4 hover:cursor-pointer"
+              : "border border-transparent mr-4 hover:cursor-pointer"
+          }
+        >
+          Projects
+        </p>
+        <p
+          onClick={onClickSource}
+          className={
+            index === 1
+              ? "transition ease-in-out duration-700 border border-b-red-200 border-x-transparent border-t-transparent hover:cursor-pointer"
+              : "border border-transparent hover:cursor-pointer"
+          }
+        >
+          Open Source
+        </p>
       </div>
       <div className="turnstile mt-10 flex justify-center">
         <button
