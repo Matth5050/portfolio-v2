@@ -5,9 +5,10 @@ import Turnstile from "./components/Turnstile";
 
 function App() {
   return (
-    <div className="App mx-5">
-      <Header />
-      <Home />
+    <div className="App mx-5 md:flex-col">
+      <div className="md:flex md:justify-center">
+        <Home />
+      </div>
       <div className="hidden md:block">
         <Turnstile />
       </div>
