@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import OpenSource from "./OpenSource";
 import Projects from "./Projects";
+import ScrollButton from "./ScrollButton";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export default function Turnstile() {
@@ -53,7 +54,7 @@ export default function Turnstile() {
           Open Source
         </p>
       </div>
-      <div className="turnstile mt-10 flex justify-center">
+      <div className="turnstile mt-10 flex justify-center ">
         <button
           onClick={() => handlePrevious()}
           className="transition ease-in-out duration-500 border border-transparent hover:border-red-900 hover:border rounded-md mt-5 mb-5 mr-4"
@@ -117,6 +118,7 @@ export default function Turnstile() {
             />
           </svg>
         </button>
+        <ScrollButton />
       </div>
     </>
   );
