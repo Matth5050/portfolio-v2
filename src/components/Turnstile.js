@@ -32,13 +32,13 @@ export default function Turnstile() {
 
   return (
     <>
-      <div className="flex justify-center mt-10 text-white">
+      <div className="flex justify-center mt-5 text-white">
         <p
           onClick={onClickProj}
           className={
             index === 0
-              ? "transition ease-in-out duration-700 border border-b-red-200 border-x-transparent border-t-transparent mr-4 hover:cursor-pointer"
-              : "border border-transparent mr-4 hover:cursor-pointer"
+              ? "visible  border border-b-red-200 border-x-transparent border-t-transparent mr-4 hover:cursor-pointer text-2xl"
+              : "visible border border-transparent mr-4 hover:cursor-pointer"
           }
         >
           Projects
@@ -47,14 +47,14 @@ export default function Turnstile() {
           onClick={onClickSource}
           className={
             index === 1
-              ? "transition ease-in-out duration-700 border border-b-red-200 border-x-transparent border-t-transparent hover:cursor-pointer"
-              : "border border-transparent hover:cursor-pointer"
+              ? "visible border border-b-red-200 border-x-transparent border-t-transparent hover:cursor-pointer text-2xl"
+              : "visible border border-transparent hover:cursor-pointer"
           }
         >
           Open Source
         </p>
       </div>
-      <div className="turnstile mt-10 flex justify-center ">
+      <div className="turnstile mt-5 flex justify-center ">
         <button
           onClick={() => handlePrevious()}
           className="transition ease-in-out duration-500 border border-transparent hover:border-red-900 hover:border rounded-md mt-5 mb-5 mr-4"

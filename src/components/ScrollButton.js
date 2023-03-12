@@ -5,9 +5,9 @@ const ScrollButton = () => {
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 10) {
+    if (scrolled > 850) {
       setVisible(true);
-    } else if (scrolled <= -200) {
+    } else if (scrolled <= 850) {
       setVisible(false);
     }
   };
@@ -22,16 +22,19 @@ const ScrollButton = () => {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <div className="bottom-5 flex justify-center items-end">
+    <div className="mb-10 ml-2 flex justify-center items-end ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="36"
         height="36"
         fill="currentColor"
-        className="bi bi-arrow-up-circle fill-white"
+        className={
+          visible
+            ? "bi bi-arrow-up-circle fill-white sticky bottom-5 visible hover:fill-blue-gray-300 hover:cursor-pointer"
+            : "bi bi-arrow-up-circle fill-transparent sticky bottom-5 nonVisible"
+        }
         viewBox="0 0 16 16"
         onClick={scrollToTop}
-        style={{ display: visible ? "inline" : "hidden" }}
       >
         <path
           fill-rule="evenodd"

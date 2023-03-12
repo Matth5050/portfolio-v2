@@ -22,13 +22,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
+  /* background: linear-gradient(
       214deg,
       rgba(0, 0, 0, 1) 10%,
       rgba(42, 9, 9, 1) 42%,
       rgba(66, 0, 0, 1) 74%
     )
-    fixed;
+    fixed; */
   /* background: -webkit-gradient(
       linear,
       left top,
@@ -100,4 +100,13 @@ code {
 
 .fade-exit-done {
   display: none;
+}
+
+/* scroll to top button */
+.visible {
+  transition: all 0.5s ease-in-out;
+}
+
+.nonVisible {
+  transition: all 0.5s ease-in-out;
 }
