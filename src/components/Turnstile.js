@@ -37,7 +37,7 @@ export default function Turnstile() {
           onClick={onClickProj}
           className={
             index === 0
-              ? "visible  border border-b-red-200 border-x-transparent border-t-transparent mr-4 hover:cursor-pointer text-2xl"
+              ? "visible  border border-b-white border-x-transparent border-t-transparent mr-4 hover:cursor-pointer text-2xl"
               : "visible border border-transparent mr-4 hover:cursor-pointer"
           }
         >
@@ -47,7 +47,7 @@ export default function Turnstile() {
           onClick={onClickSource}
           className={
             index === 1
-              ? "visible border border-b-red-200 border-x-transparent border-t-transparent hover:cursor-pointer text-2xl"
+              ? "visible border border-b-white border-x-transparent border-t-transparent hover:cursor-pointer text-2xl"
               : "visible border border-transparent hover:cursor-pointer"
           }
         >
@@ -57,14 +57,14 @@ export default function Turnstile() {
       <div className="turnstile mt-5 flex justify-center ">
         <button
           onClick={() => handlePrevious()}
-          className="transition ease-in-out duration-500 border border-transparent hover:border-red-900 hover:border rounded-md mt-5 mb-5 mr-4"
+          className="transition ease-in-out duration-500 border border-transparent hover:border-gray-800 hover:border rounded-md mt-5 mb-5 mr-4 h-screen sticky top-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             height="40"
             fill="currentColor"
-            className="bi bi-chevron-left fill-white hover:fill-blue-500 sticky top-1/3 bottom-1/3"
+            className="bi bi-chevron-left fill-white transition ease-in-out duration-500 hover:fill-gray-800 "
             viewBox="0 0 16 16"
           >
             <path
@@ -102,14 +102,14 @@ export default function Turnstile() {
         </div>
         <button
           onClick={() => handleNext()}
-          className="rounded-md transition ease-in-out duration-500 border border-transparent hover:border-red-900 hover:border mt-5 mb-5"
+          className="rounded-md transition ease-in-out duration-500 border border-transparent hover:border-gray-800 hover:border mt-5 mb-5 h-screen sticky top-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             height="40"
             fill="currentColor"
-            className="bi bi-chevron-right fill-white hover:fill-blue-500 sticky top-1/3 bottom-1/3"
+            className="bi bi-chevron-right fill-white transition ease-in-out duration-500 hover:fill-gray-800 sticky top-1/3 bottom-1/3"
             viewBox="0 0 16 16"
           >
             <path
