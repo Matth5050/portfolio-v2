@@ -22,7 +22,7 @@ const ScrollButton = () => {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <div className="mb-10 ml-2 flex justify-center items-end ">
+    <div className="mb-10 ml-2 flex justify-center items-end">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="36"
