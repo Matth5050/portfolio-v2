@@ -8,6 +8,8 @@ module.exports = withMT({
     extend: {
       colors: {
         rose: colors.rose,
+        slate: colors.slate,
+        violet: colors.violet,
       },
     },
   },
