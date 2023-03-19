@@ -37,7 +37,7 @@ export default function Turnstile() {
           onClick={onClickProj}
           className={
             index === 0
-              ? "visible border border-b-rose-300 border-x-transparent border-t-transparent mr-4 hover:cursor-pointer text-2xl"
+              ? "visible border border-b-white border-x-transparent border-t-transparent mr-4 hover:cursor-pointer text-2xl"
               : "visible border border-transparent mr-4 hover:cursor-pointer"
           }
         >
@@ -47,7 +47,7 @@ export default function Turnstile() {
           onClick={onClickSource}
           className={
             index === 1
-              ? "visible border border-b-rose-300 border-x-transparent border-t-transparent hover:cursor-pointer text-2xl"
+              ? "visible border border-b-white border-x-transparent border-t-transparent hover:cursor-pointer text-2xl"
               : "visible border border-transparent hover:cursor-pointer"
           }
         >
