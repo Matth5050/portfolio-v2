@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import OpenSource from "./OpenSource";
 import Projects from "./Projects";
+import Certificates from "./Certificates";
 import ScrollButton from "./ScrollButton";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
@@ -8,7 +9,7 @@ export default function Turnstile() {
   const [index, setIndex] = useState(0);
   const [slideLeft, setSlideLeft] = useState(null);
 
-  const length = 2;
+  const length = 3;
 
   const handlePrevious = () => {
     const newIndex = index - 1;
@@ -30,9 +31,13 @@ export default function Turnstile() {
     setIndex(1);
   };
 
+  const onClickCert = () => {
+    setIndex(2);
+  };
+
   return (
     <>
-      <div className="flex justify-center mt-5 text-white">
+      <div className="flex justify-center text-white">
         <p
           onClick={onClickProj}
           className={
@@ -52,6 +57,16 @@ export default function Turnstile() {
           }
         >
           Open Source
+        </p>
+        <p
+          onClick={onClickCert}
+          className={
+            index === 2
+              ? "visible border border-b-white border-x-transparent border-t-transparent ml-4 hover:cursor-pointer text-2xl"
+              : "visible border border-transparent ml-4 hover:cursor-pointer"
+          }
+        >
+          Certifications
         </p>
       </div>
       <div className="turnstile mt-5 flex justify-center ">
@@ -96,7 +111,13 @@ export default function Turnstile() {
                     }
               }
             >
-              {index === 0 ? <Projects /> : <OpenSource />}
+              {index === 0 ? (
+                <Projects />
+              ) : index === 1 ? (
+                <OpenSource />
+              ) : (
+                <Certificates />
+              )}
             </CSSTransition>
           </TransitionGroup>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import jokeBook from "../assets/jokeBook.png";
 import leaderBet from "../assets/leaderBet.png";
 import cardanoWatch from "../assets/cardano.png";
+import soundboard from "../assets/soundboard.png";
 import slag from "../assets/slag.png";
 
 export default function Projects() {
@@ -40,6 +41,17 @@ export default function Projects() {
       order: 3,
     },
     {
+      pic: soundboard,
+      alt: "CardanoWatch Screen Shot",
+      webLink: "https://freesoundboard.io/",
+      repoLink: "https://github.com/Matth5050/Soundboard",
+      stack: "JS",
+      title: "freeSoundBoard.io",
+      description:
+        "A quick and easy to use tool that allows anyone to make a custom soundboard",
+      order: 2,
+    },
+    {
       pic: slag,
       alt: "S.L.A.G. Screen Shot",
       // webLink: "",
@@ -49,7 +61,7 @@ export default function Projects() {
       title: "S.L.A.G. Game",
       description:
         "Multiplayer PvP battle game where players build their teams and watch them fight",
-      order: 3,
+      order: 1,
     },
   ];
 
